@@ -1,3 +1,7 @@
+// Copyright (c) 2024 ALTAI Consulting, Inc and Aleksey Gershgorin. All rights reserved.
+// Use of this source code is governed by MIT license that can be found in the LICENSE file.
+
+// Code below was written for the Medium Article "Using Golang Fan-Out Concurrency Pattern for Splitting Stream by Keys"
 package main
 
 import (
