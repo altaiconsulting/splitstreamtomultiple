@@ -24,7 +24,7 @@ type IdentifiableChan[T any] struct {
 }
 
 // FanOut splits the stream represented by inChan into separate streams differentiated by key
-func FanOut[K comparable, V any](ctx context.Context, inChan <-chan KeyValuePair[K, V]) chan IdentifiableChan[KeyValuePair[K, V]] {
+func FanOut[K comparable, V any](ctx context.Context, inChan <-chan KeyValuePair[K, V]) <-chan IdentifiableChan[KeyValuePair[K, V]] {
 	fanOutMap := make(map[K]IdentifiableChan[KeyValuePair[K, V]])
 	fanOutCh := make(chan IdentifiableChan[KeyValuePair[K, V]])
 	go func() {
